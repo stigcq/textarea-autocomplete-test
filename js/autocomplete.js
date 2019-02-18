@@ -16,8 +16,9 @@ $('#autocomplete_textarea').textcomplete([
                 headers: {"Authorization": "Bearer MjAxOS0wMi0xMw==.c3RpZ2NxQHlhaG9vLmNvbQ==.MWYyYmU0NWZlZWUyZWZjYzBkNDBlYWI4NTA0ZjEzOTE="}
             }).done(function(data) {
 
-                //console.log(data);
-                callback(data);
+
+                console.log(data.length);
+                callback(data.slice(0, 10));
               });
 
            
